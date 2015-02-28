@@ -11,12 +11,12 @@ $(document).on 'ready page:load', ->
         navigation.animate left: "-320px"
       navigation.find('nav ul:last-of-type a').css('margin', '0')
     else
-      $('#blur').fadeIn()
       $(@).addClass 'active'
       if navigation.css('float') == 'left'
         navigation.find('nav').slideDown ->
           navigation.find('nav ul:last-of-type a').css('margin', '0 5px')
       else
+        $('#blur').fadeIn()
         navigation.animate left: '0px', ->
           navigation.find('nav ul:last-of-type a').css('margin', '0 5px')
     false
@@ -54,11 +54,16 @@ $(document).on 'ready page:load', ->
   , ->
     $('#comumcc').removeClass('active')
 
+  $('.slide-dots').mousemove (e) ->
+    amountMovedX = (e.pageX * -1 / 6)
+    amountMovedY = (e.pageY * -1 / 6)
+    $(@).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px')
+
 $.fn.waypoint = (down, up) ->
   that = $(@)
   return that if that.size() == 0
   $(document).scroll ->
     top = $(document).scrollTop() + $(window).height()
-    end = that.offset().top + that.height() + 100
+    end = that.offset().top + (that.height()/2)
     if top > end then down() else up()
   that

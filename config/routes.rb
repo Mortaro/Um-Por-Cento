@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  mount Sutler::Engine => "/admin"
+
   root 'pages#root'
   get '/quem-somos' => 'pages#who_we_are', as: 'who_we_are'
   get '/o-que-fazemos' => 'pages#what_we_do', as: 'what_we_do'
@@ -7,4 +10,5 @@ Rails.application.routes.draw do
   get '/parceiros' => 'pages#partners', as: 'partners'
   get '/loja' => 'pages#store', as: 'store'
   get '/contato' => 'pages#contact', as: 'contact'
+
 end

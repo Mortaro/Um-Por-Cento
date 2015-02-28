@@ -1,25 +1,68 @@
 section#intro-slider
+  .cycle-slideshow data-cycle-fx="fadeout" data-cycle-timeout="6000" data-cycle-slides=".slide" data-cycle-speed="800" data-cycle-pager-template="<li>{{cycleTitle}}</li>" data-cycle-log="false"
+    .slide-dots
+    - 4.times do |i|
+      .slide data-cycle-title="slide[:title] #{i}" style='background-image: url(https://raw.githubusercontent.com/gustavoguichard/umporcento/master/app/assets/images/slides/slide-1.jpg);'
+        h4 slide[:caption_1] #{i}
+        h4 slide[:caption_2]
+    ul.cycle-pager
 section#comumcc
   .center
-    = link_to 'http://comum.cc' do
-      h2 comum.cc
-    - 3.times
-      .blue-circle
-        h3 Somos uma
-        ul
-          - 8.times do
-            li Lorem Ipsum
+    .blue-circle
+      h3 Somos um/uma
+      ul
+        li marca
+        li símbolo
+        li movimento
+        li comunidade
+        li bandeira
+        li insígnia
+        li grupo
+        li nome
+        li ideia
+        li rede
+    .circle-clear
+    .blue-circle
+      h3 100%
+      ul
+        li compartilhada
+        li open source
+        li autônoma
+        li gratuita
+        li livre
+        li aberta
+        li coletiva
+        li distribuída
+        li colaborativa
+        li auto-gestionada
+    .circle-clear
+    .blue-circle
+      h3 Que faz
+      ul
+        li arte
+        li ações
+        li projetos
+        li negócios
+        li tecnologia
+        li comunicação
+        li encontros
+        li produtos
+        li serviços
+        li coisas
+    = link_to 'comum.cc', 'http://comum.cc'
+
 section#time-percentage.dotted-background
   .center
-    h2 14 Minutos
-    #clock
-      span.frame
-      - 1.upto 12 do |i|
-        span.hour class="hour-#{i}"
-      span.hours
-      span.minutes
-      span.seconds
-    h2 24 Segundos
+    #clock-wrapper
+      h2 14 Minutos
+      #clock
+        span.frame
+        - 1.upto 12 do |i|
+          span.hour class="hour-#{i}"
+        span.hours
+        span.minutes
+        span.seconds
+      h2 24 Segundos
     h3 Este é o tempo exato de apenas 1% do seu dia.
     h3 Dedique ao próximo, a você mesmo!
     p
