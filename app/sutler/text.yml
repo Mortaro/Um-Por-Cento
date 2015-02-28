@@ -1,0 +1,9 @@
+attributes:
+
+  title:
+    input: text_field
+    index: title
+
+  content:
+    input: text_area
+    index: content_summary

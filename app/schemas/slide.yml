@@ -1,0 +1,7 @@
+slide:
+
+  title:
+    type: string
+
+  image:
+    type: text

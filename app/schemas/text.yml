@@ -1,0 +1,7 @@
+text:
+
+  title:
+    type: string
+
+  content:
+    type: text

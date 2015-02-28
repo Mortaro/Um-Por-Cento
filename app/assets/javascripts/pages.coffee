@@ -27,38 +27,6 @@ $(document).on 'ready page:load', ->
   , ->
     $('#bird span:first-of-type').stop().fadeIn('slow')
 
-  $('#intro-slider').height($(window).height())
-
-  $('#time-percentage').waypoint ->
-    $('#clock').addClass('active')
-    $('#time-percentage').addClass('active')
-    $('#time-percentage em:nth-child(1)').addClass('active')
-    setTimeout ->
-      $('#time-percentage em:nth-child(1)').removeClass('active')
-      $('#time-percentage em:nth-child(2)').addClass('active')
-      setTimeout ->
-        $('#time-percentage em:nth-child(2)').removeClass('active')
-        $('#time-percentage em:nth-child(3)').addClass('active')
-        setTimeout ->
-          $('#time-percentage em:nth-child(3)').removeClass('active')
-        , 2000
-      , 2000
-    , 2000
-  , ->
-    $('#clock').removeClass('active')
-    $('#time-percentage').removeClass('active')
-    $('#time-percentage em').removeClass('active')
-
-  $('#comumcc').waypoint ->
-    $('#comumcc').addClass('active')
-  , ->
-    $('#comumcc').removeClass('active')
-
-  $('.slide-dots').mousemove (e) ->
-    amountMovedX = (e.pageX * -1 / 6)
-    amountMovedY = (e.pageY * -1 / 6)
-    $(@).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px')
-
 $.fn.waypoint = (down, up) ->
   that = $(@)
   return that if that.size() == 0

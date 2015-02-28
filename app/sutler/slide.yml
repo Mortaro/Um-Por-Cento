@@ -1,0 +1,8 @@
+attributes:
+
+  title:
+    input: text_field
+    index: title
+
+  image:
+    input: gallery

@@ -1,0 +1,24 @@
+#navigation
+  nav
+    #bird
+      span
+      span
+    ul
+      li= link_to "Quem Somos", who_we_are_path
+      li= link_to "O que fazemos", what_we_do_path
+      li= link_to "Como Ajudar", how_to_help_path
+    ul
+      li= link_to "Inspirações", inspirations_path
+      li= link_to "Parceiros", partners_path
+      li= link_to "Loja", store_path
+      li= link_to "Contato", contact_path
+    ul
+      li= link_to "Facebook", "https://www.facebook.com/umporcento.org", target: '_blank'
+      li= link_to "Instagram", "http://instagram.com/UmPorCentoOrg", target: '_blank'
+      li= link_to "Blog", "https://medium.com/@umporcento", target: '_blank'
+      li= link_to "YouTube", "https://www.youtube.com/user/UmPorCentoORG", target: '_blank'
+      li= link_to "Vimeo", "https://vimeo.com/umporcentoorg", target: '_blank'
+  aside
+    a href="#navigation"
+      span
+    = link_to image_tag('logo.png'), root_path

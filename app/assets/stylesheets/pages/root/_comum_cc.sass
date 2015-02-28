@@ -1,0 +1,71 @@
+#comumcc
+  float: left
+  width: 100%
+  padding: 190px 10px 90px
+  text-align: center
+  position: relative
+  @media (min-width: 1000px)
+    &:before
+      content: ''
+      width: 100%
+      background: $cyan image-url('dotted-bg.png') repeat center fixed
+      height: 100px
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+  a
+    color: $cyan
+    margin-bottom: 40px
+    font-size: 30px
+    padding-bottom: 20px
+    display: block
+    background: image-url('comum-bg.png') no-repeat center bottom
+    margin-top: 30px
+    font-family: "Amatic SC", cursive
+    font-weight: normal
+  .circle-clear
+    width: 100%
+    display: inline-block
+    height: 65px
+    @media (min-width: 1000px)
+      display: none
+  .blue-circle
+    color: #fff
+    opacity: 0.8
+    margin: 0 -30px
+    background: $cyan
+    display: inline-block
+    border-radius: 100%
+    width: 340px
+    height: 340px
+    transition: all 1s
+    cursor: pointer
+    position: relative
+    ul
+      height: 340px
+      width: 340px
+      vertical-align: middle
+      display: table-cell
+      li
+        font-size: 20px
+        line-height: 28px
+    h3
+      text-transform: uppercase
+      font-family: "Amatic SC", cursive
+      font-size: 30px
+      position: absolute
+      top: -155px
+      left: 0
+      width: 100%
+      @media (max-width: 1000px)
+        color: $cyan
+        top: -55px
+    &:hover
+      background: darken($cyan, 10%)
+      box-shadow: rgba(0,0,0,0.5) 0 0 74px inset
+      h3
+        text-decoration: line-through
+  &.active
+    .blue-circle
+      margin: 0 -10px

@@ -1,0 +1,240 @@
+$cyan:  #12d9e1
+
+*
+  margin: 0
+  padding: 0
+  font-family: "Gotham Book", sans-serif
+  font-size: 14px
+  box-sizing: border-box
+
+a
+  text-decoration: none
+  color: #fff
+  font-weight: bolder
+  &:hover
+    color: $cyan
+    text-decoration: line-through
+
+li
+  list-style: none
+
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC:400,700)
+
+@font-face
+  font-family: 'Gotham Bold'
+  src: url('gotham-bold-webfont.eot')
+  src: url('gotham-bold-webfont.eot?#iefix') format('embedded-opentype'), url('gotham-bold-webfont.woff2') format('woff2'), url('gotham-bold-webfont.woff') format('woff'), url('gotham-bold-webfont.ttf') format('truetype'), url('gotham-bold-webfont.svg#gotham_boldregular') format('svg')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Gotham Book'
+  src: url('gotham-book-webfont.eot')
+  src: url('gotham-book-webfont.eot?#iefix') format('embedded-opentype'), url('gotham-book-webfont.woff2') format('woff2'), url('gotham-book-webfont.woff') format('woff'), url('gotham-book-webfont.ttf') format('truetype'), url('gotham-book-webfont.svg#gotham_bookregular') format('svg')
+  font-weight: normal
+  font-style: normal
+
+#blur
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  bottom: 0
+  background: image-url('blur-bg.png')
+  opacity: 0.4
+  display: none
+  z-index: 888
+
+#navigation
+  z-index: 999999
+  @media (min-width: 560px)
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+  @media (max-width: 560px)
+    float: left
+    width: 100%
+  text-align: center
+  nav
+    @media (min-width: 560px)
+      padding-top: 40px
+      width: 320px
+    @media (max-width: 560px)
+      padding-top: 200px
+      width: 100%
+    float: left
+    background: hsla(0,0,0,0.9)
+    height: 100%
+    position: relative
+    #bird
+      width: 100%
+      height: 101px
+      position: relative
+      span
+        position: absolute
+        top: 0
+        left: 0
+        height: 101px
+        width: 100%
+      span:first-of-type
+        background: image-url('bird-sprite.png') no-repeat center 0
+        z-index: 9
+      span:last-of-type
+        background: image-url('bird-sprite.png') no-repeat center -111px
+    ul
+      a
+        font-size: 18px
+        text-transform: uppercase
+        line-height: 32px
+    ul:first-of-type
+      &:before, &:after
+        content: ""
+        background: image-url('dotted-row.png') no-repeat center
+        height: 7px
+        width: 100%
+        display: block
+        margin: 20px 0
+      a
+        font-family: "Amatic SC", cursive
+        font-size: 30px
+        line-height: 51px
+        &:after
+          content: "?"
+          font-weight: normal
+          font-size: 30px
+    ul:last-of-type
+      width: 100%
+      @media (min-width: 560px)
+        position: absolute
+        bottom: 20px
+        left: 0
+      @media (max-width: 560px)
+        margin: 40px 0
+  aside
+    @media (max-width: 560px)
+      position: fixed
+      top: 40px
+      left: 50%
+      margin-left: -107px
+    @media (min-width: 560px)
+      position: absolute
+      top: 20px
+      right: -232px
+    z-index: 9999
+    a
+      float: left
+      width: 106px
+      height: 105px
+      display: block
+      transition: al .3s
+    a:first-of-type
+      background: $cyan
+      position: relative
+      span
+        position: absolute
+        top: 50px
+        left: 30%
+        display: block
+        width: 40%
+        height: 6px
+        background: #fff
+        transition: all .3s
+        &:after, &:before
+          content: ""
+          display: block
+          background: white
+          height: 100%
+          width: 100%
+          position: relative
+          transition: all .3s
+          transform-origin: 50% 50%
+        &:before
+          top: -14px
+        &:after
+          bottom: -8px
+      &:hover
+        span
+          background: transparent
+          &:after
+            transform: rotate(-90deg) translate(14px, 0)
+          &:before
+            transform: translate(0, 14px)
+      &.active
+        span
+          background: transparent
+          &:before
+            transform: rotate(45deg) translate(10px, 10px)
+          &:after
+            transform: rotate(-45deg) translate(10px, -10px)
+        &:hover
+          opacity: 0.8
+    a:last-of-type
+      &:hover
+        background: #000
+        padding: 3px 5px 0 3px
+        img
+          height: 100px
+
+.center
+  @media (min-width: 1170px)
+    width: 1170px
+  @media (max-width: 1170px)
+    width: 100%
+  margin: 0 auto
+
+.dotted-background
+  background: #021c1d image-url('dotted-bg.png') repeat center fixed
+  padding: 90px 10px
+  width: 100%
+  float: left
+  color: #fff
+
+footer
+  padding: 50px 0
+  background: #021c1d
+  color: white
+  width: 100%
+  float: left
+  ul
+    float: left
+    margin-top: -4px
+    li
+      margin-right: 5px
+  p
+    float: right
+    a
+      margin: 0 5px
+  @media (max-width: 980px)
+    line-height: 25px
+    text-align: center
+    p
+      width: 100%
+    ul
+      width: 100%
+
+footer ul, #navigation nav ul:last-of-type
+  li
+    display: inline-block
+    a
+      width: 23px
+      height: 24px
+      background: image-url('social-sprite.png')
+      display: block
+      overflow: hidden
+      text-indent: -999px
+      transition: all .3s
+      &:hover
+        background-position-y: -30px
+    &:nth-child(2)
+      a
+        background-position-x: -33px
+    &:nth-child(3)
+      a
+        background-position-x: -128px
+    &:nth-child(4)
+      a
+        background-position-x: -66px
+    &:nth-child(5)
+      a
+        background-position-x: -99px
