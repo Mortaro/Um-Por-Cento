@@ -32,6 +32,9 @@ $.fn.waypoint = (down, up) ->
   return that if that.size() == 0
   $(document).scroll ->
     top = $(document).scrollTop() + $(window).height()
-    end = that.offset().top + (that.height()/2)
+    if $('#navigation').css('float') == 'left'
+      end = that.offset().top + (that.height()/2)
+    else
+      end = that.offset().top + (that.height())
     if top > end then down() else up()
   that
