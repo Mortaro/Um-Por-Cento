@@ -1,0 +1,93 @@
+.members-expanded
+  position: fixed
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  background: rgba(#000, 0.9)
+  z-index: 99999999
+  overflow: auto
+  display: none
+  li
+    display: none
+  img
+    border-radius: 100%
+    margin-top: 90px
+    display: inline-block
+  em
+    width: 100%
+    display: inline-block
+    margin: 20px 0
+  h3
+    font-family: "Amatic SC", cursive
+    font-size: 68px
+  h4
+    text-transform: uppercase
+  p
+    padding: 0 20px
+  a[href='#']
+    border: 1px solid #fff
+    padding: 5px 10px
+    text-transform: uppercase
+    margin: 30px 0
+    display: inline-block
+  ul
+    margin-top: 10px
+    li
+      margin: 0 5px
+
+.members
+  margin-top: 40px
+  display: inline-block
+  max-width: 920px
+  li
+    width: 220px
+    height: 220px
+    display: inline-block
+    margin: 4px 5px 5px
+    background-size: 100% auto
+    background-position: center
+    cursor: pointer
+    transition: all .3s
+    &:hover
+      background-size: 105% auto
+    &.placeholder
+      border: 1px dashed rgba(#fff, 0.2)
+      cursor: help
+    .overlay
+      position: relative
+      background: rgba($cyan, 0.7)
+      width: 100%
+      height: 100%
+      color: #000
+      transition: all .3s
+      opacity: 0
+      float: left
+      h4
+        font-size: 17px
+        margin: 10px 0
+        text-transform: uppercase
+        width: 80%
+        display: inline-block
+      span:first-of-type
+        margin-top: 30px
+        opacity: 0
+        float: left
+        width: 100%
+        transition: all .3s
+        display: inline-block
+      span:last-of-type
+        border: 1px solid #000
+        padding: 1px 5px
+        position: absolute
+        left: 20px
+        bottom: 5px
+        opacity: 0.7
+        transition: all .3s
+      &:hover
+        opacity: 1
+        span:first-of-type
+          margin-top: 70px
+          opacity: 1
+        span:last-of-type
+          left: 5px

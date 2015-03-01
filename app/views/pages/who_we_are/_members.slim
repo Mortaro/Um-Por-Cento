@@ -1,0 +1,31 @@
+ul.members
+  - (Member.send(kind) + ([nil] * (4-(Member.send(kind).count % 4)))).shuffle.each do |member|
+    - if member
+      li style="background-image: url(#{member.avatar})" data-index=member.id
+        .overlay
+          span= member.role
+          h4= member.name
+          span +
+    - else
+      li.placeholder
+
+ul.members-expanded
+  - Member.send(kind).each do |member|
+    li.center data-index=member.id
+      = image_tag member.avatar
+      em= member.birthday
+      h3= member.name
+      h4= member.kin
+      p= member.about
+      ul
+        - if member.facebook?
+          li= link_to "Facebook", "https://www.facebook.com/#{member.facebook}", target: '_blank'
+        - if member.instagram?
+          li= link_to "Instagram", "http://instagram.com/#{member.instagram}", target: '_blank'
+        - if member.medium?
+          li= link_to "Blog", "https://medium.com/#{member.medium}", target: '_blank'
+        - if member.youtube?
+          li= link_to "YouTube", "https://www.youtube.com/user/#{member.youtube}", target: '_blank'
+        - if member.vimeo?
+          li= link_to "Vimeo", "https://vimeo.com/#{member.vimeo}", target: '_blank'
+      = link_to 'Voltar', '#'

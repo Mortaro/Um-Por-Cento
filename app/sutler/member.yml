@@ -1,0 +1,41 @@
+attributes:
+
+  name:
+    input: text_field
+    index: name
+
+  role:
+    input: text_field
+    index: role
+
+  avatar:
+    input: gallery
+
+  birthday:
+    input: text_field
+
+  kind:
+    input: select
+    options: Nós, Embaixadores, Guardiões
+    index: kind
+
+  kin:
+    input: text_field
+
+  about:
+    input: text_area
+
+  facebook:
+    input: text_field
+
+  instagram:
+    input: text_field
+
+  medium:
+    input: text_field
+
+  youtube:
+    input: text_field
+
+  vimeo:
+    input: text_field

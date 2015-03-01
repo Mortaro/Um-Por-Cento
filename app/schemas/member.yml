@@ -1,0 +1,37 @@
+member:
+
+  avatar:
+    type: string
+
+  name:
+    type: string
+
+  role:
+    type: string
+
+  birthday:
+    type: string
+
+  kin:
+    type: string
+
+  kind:
+    type: string
+
+  about:
+    type: text
+
+  facebook:
+    type: text
+
+  instagram:
+    type: text
+
+  medium:
+    type: text
+
+  youtube:
+    type: text
+
+  vimeo:
+    type: text

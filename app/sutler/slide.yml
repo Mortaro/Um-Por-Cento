@@ -6,3 +6,11 @@ attributes:
 
   image:
     input: gallery
+
+  caption_top:
+    input: text_field
+    index: caption_top
+
+  caption_bottom:
+    input: text_field
+    index: caption_bottom

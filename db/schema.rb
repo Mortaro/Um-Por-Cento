@@ -11,13 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150228013031) do
+ActiveRecord::Schema.define(version: 20150301011349) do
 
-  create_table "slides", force: :cascade do |t|
+  create_table "members", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "avatar"
+    t.string   "name"
+    t.string   "birthday"
+    t.string   "kin"
+    t.text     "about"
+    t.string   "kind"
+    t.string   "role"
+    t.text     "facebook"
+    t.text     "instagram"
+    t.text     "medium"
+    t.text     "youtube"
+    t.text     "vimeo"
+  end
+
+  create_table "slides", force: :cascade do |t|
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.string   "title"
     t.text     "image"
+    t.string   "caption_top"
+    t.string   "caption_bottom"
   end
 
   create_table "sutler_users", force: :cascade do |t|

@@ -6,9 +6,9 @@ GIT
 
 GIT
   remote: git://github.com/Mortaro/Sutler.git
-  revision: ac78441322599d2831ba1de05c47eb379c67d26d
+  revision: fc97eafacda62eb304bd5bdebdce920fe8a8c95b
   specs:
-    sutler (0.0.3)
+    sutler (0.0.5)
       bootstrap-sass (~> 3.3.3)
       coffee-rails (~> 4.1.0)
       devise
@@ -233,7 +233,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   slim (= 2.0.2)
   sqlite3
-  sutler (= 0.0.3)!
+  sutler (= 0.0.5)!
   turbolinks
   tzinfo-data
   uglifier (>= 1.3.0)

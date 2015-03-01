@@ -12,7 +12,7 @@ gem 'slim', '2.0.2'
 gem 'active_schema', github: 'Mortaro/ActiveSchema'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :jruby]
 gem 'jquery-turbolinks'
-gem 'sutler', '0.0.3', github: 'Mortaro/Sutler'
+gem 'sutler', '0.0.5', github: 'Mortaro/Sutler'
 
 # monkeypatch for sutler
 gem 'devise'

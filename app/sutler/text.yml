@@ -2,6 +2,7 @@ attributes:
 
   title:
     input: text_field
+    readonly: true
     index: title
 
   content:

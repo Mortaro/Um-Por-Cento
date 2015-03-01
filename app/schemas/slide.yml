@@ -5,3 +5,9 @@ slide:
 
   image:
     type: text
+
+  caption_top:
+    type: string
+
+  caption_bottom:
+    type: string
