@@ -1,4 +1,4 @@
-$(document).on 'ready page:load', ->
+$ ->
 
   $('#time-percentage').waypoint ->
     $('#clock').addClass('active')

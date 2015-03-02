@@ -1,0 +1,15 @@
+attributes:
+
+  name:
+    input: text_field
+    index: name
+
+  logo:
+    input: gallery
+
+  role:
+    input: text_field
+
+  link:
+    input: text_field
+    index: link

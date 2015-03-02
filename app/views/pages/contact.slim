@@ -1,0 +1,12 @@
+section#contact.text-section
+  .center
+    h1 Contato
+    = text_for 'Contato'
+    = form_tag '/contato' do
+      = label_tag :nome
+      = text_field_tag :nome
+      = label_tag :email
+      = text_field_tag :email
+      = label_tag :mensagem
+      = text_area_tag :mensagem
+      = submit_tag 'Enviar :)', data: {message: 'Sua mensagem está sendo enviada...'}

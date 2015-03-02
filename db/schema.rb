@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150301011349) do
+ActiveRecord::Schema.define(version: 20150301224644) do
 
   create_table "members", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -28,6 +28,15 @@ ActiveRecord::Schema.define(version: 20150301011349) do
     t.text     "medium"
     t.text     "youtube"
     t.text     "vimeo"
+  end
+
+  create_table "partners", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "logo"
+    t.string   "role"
+    t.string   "name"
+    t.string   "link"
   end
 
   create_table "slides", force: :cascade do |t|

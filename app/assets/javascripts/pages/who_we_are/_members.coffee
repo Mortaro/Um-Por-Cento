@@ -1,4 +1,4 @@
-$(document).on 'ready page:load', ->
+$ ->
 
   $('.members li').not('.placeholder').click ->
     $('.members-expanded').show()

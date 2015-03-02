@@ -1,4 +1,4 @@
-$(document).on 'ready page:load', ->
+$ ->
 
   $('#intro-slider').height($(window).height())
 

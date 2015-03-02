@@ -11,7 +11,8 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require cycle2
-//= require turbolinks
 //= require_tree .
+//= require turbolinks

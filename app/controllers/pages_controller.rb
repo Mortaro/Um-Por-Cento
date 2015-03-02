@@ -1,5 +1,8 @@
 class PagesController < ApplicationController
-  def who_we_are
-    @us = ['person'] * 10
+  def contact
+    if request.post?
+      Contacts.contact(params).deliver_later
+      redirect_to root_path
+    end
   end
 end

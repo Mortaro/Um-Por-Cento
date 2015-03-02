@@ -1,0 +1,13 @@
+partner:
+
+  logo:
+    type: string
+
+  role:
+    type: string
+
+  name:
+    type: string
+
+  link:
+    type: string
