@@ -1,7 +1,7 @@
 ul.members
   - (Member.send(kind) + ([nil] * (4-(Member.send(kind).count % 4)))).shuffle.each do |member|
     - if member
-      li style="background-image: url(#{member.avatar})" data-index=member.id
+      li style="background-image: url(#{member.avatar.to_link})" data-index=member.id
         .overlay
           span= member.role
           h4= member.name
