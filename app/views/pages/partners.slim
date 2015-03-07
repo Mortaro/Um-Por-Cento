@@ -4,7 +4,7 @@ section#partners.text-section
     ul.members
       - (Partner.all + ([nil] * (4-(Partner.count % 4)))).shuffle.each do |partner|
         - if partner
-          li style="background-image: url(#{partner.logo.to_link})" data-index=partner.id
+          li style="background-image: url('#{partner.logo}')" data-index=partner.id
             = link_to partner.link, target: '_blank' do
               .overlay
                 span= partner.role
