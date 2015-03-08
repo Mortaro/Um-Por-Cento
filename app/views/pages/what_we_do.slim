@@ -1,21 +1,18 @@
-section.text-section
+section.text-section#what_we_do
   h1 O que fazemos?
   .circles-triangle
-    .triangle-top
-      .blue-circle
-        = link_to '#', data: {soon: 'Em Breve'} do
-          | Conectamos
-          span
-            | (G.A.B.W)
-    .triangle-bottom
-      .blue-circle
-        = link_to '#', data: {soon: 'Em Breve'} do
-          | Criamos
-          span
-            | (Projetos do Bem)
-    .triangle-bottom
-      .blue-circle
-        = link_to '#', data: {soon: 'Em Breve'} do
-          | Servimos
-          span
-            | (Consultoria Social)
+    .blue-circle
+      = link_to g_a_b_w_path do
+        | Conectamos
+        span
+          | (G.A.B.W)
+    .blue-circle
+      = link_to '#', data: {soon: 'Em Breve'} do
+        | Criamos
+        span
+          | (Projetos do Bem)
+    .blue-circle
+      = link_to '#', data: {soon: 'Em Breve'} do
+        | Servimos
+        span
+          | (Consultoria Social)

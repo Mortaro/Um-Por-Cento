@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150301224644) do
+ActiveRecord::Schema.define(version: 20150308215650) do
 
   create_table "members", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -46,6 +46,15 @@ ActiveRecord::Schema.define(version: 20150301224644) do
     t.text     "image"
     t.string   "caption_top"
     t.string   "caption_bottom"
+  end
+
+  create_table "stamps", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "logo"
+    t.string   "role"
+    t.string   "name"
+    t.string   "link"
   end
 
   create_table "sutler_users", force: :cascade do |t|

@@ -8,6 +8,6 @@ $ ->
     false
 
   $('.text-section ul').waypoint ->
-    $('.text-section ul').addClass 'active'
+    $('.text-section ul').delay(2000).addClass 'active'
   , ->
     $('.text-section ul').removeClass 'active'

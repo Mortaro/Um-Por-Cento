@@ -5,7 +5,8 @@ module PagesHelper
   end
 
   def placeholders collection
-    [nil] * (collection.count % 4)
+    mod = (collection.count % 4)
+    [nil] * (mod.zero? ? mod : (4 - mod))
   end
 
 end

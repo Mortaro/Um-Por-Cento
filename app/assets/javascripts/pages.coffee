@@ -2,29 +2,41 @@ $ ->
 
   $('[data-easteregg]').click ->
     window.open('http://'+$(@).attr('data-easteregg'), '_blank')
-    $(@).unbind()
+    $(@).unbind('click')
 
   $('.go-back').click ->
     $('html, body').animate {scrollTop: 0}, 'slow'
     $(@).closest('section').slideUp()
 
   $('section').each ->
-    section = $(@)
-    height = $(window).height()
-    section.css('min-height', height)
-    center = $(@).find('.center').first()
-    if center.size() > 0
-      if center.height() < height
-        if section.is(':visible')
-          center.css("margin-top", ((height - center.height()) / 2))
-        else
-          section.show()
-          center.css("margin-top", ((height - center.height()) / 2))
-          section.hide()
     $(@).mousemove (e) ->
       amountMovedX = (e.pageX * -1 / 20)
       amountMovedY = (e.pageY * -1 / 20)
       $(@).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px')
+    section = $(@)
+    height = $(window).height()
+    section.css('min-height', height)
+    center = $(@).find('.center').first()
+    unless $(@).hasClass('skip-align')
+      if center.size() > 0
+        if center.height() < height
+          if section.is(':visible')
+            center.css("margin-top", ((height - center.height()) / 2))
+          else
+            section.show()
+            center.css("margin-top", ((height - center.height()) / 2))
+            section.hide()
+    $(window).resize ->
+      section.css('min-height', height)
+      unless $(@).hasClass('skip-align')
+        if center.size() > 0
+          if center.height() < height
+            if section.is(':visible')
+              center.css("margin-top", ((height - center.height()) / 2))
+            else
+              section.show()
+              center.css("margin-top", ((height - center.height()) / 2))
+              section.hide()
 
   $('#contact form').submit ->
     btn = $(@).find('input[type=submit]')
@@ -37,10 +49,13 @@ $ ->
 
   $('.construction').click -> false
 
-  $('.triangle-top').waypoint ->
-    $('.circles-triangle').addClass 'active'
+  if $('.circles-triangle').size() > 0 && $('.circles-triangle .blue-circle').size() > 1
+    $('.circles-triangle').delay(1000).addClass 'active'
+
+  $('.stamp').parent().waypoint ->
+    $('.stamp').delay(2000).addClass 'active'
   , ->
-    $('.circles-triangle').removeClass 'active'
+    $('.stamp').removeClass 'active'
 
   $('[data-soon]').each ->
     $(@).attr('data-original', $(@).html())

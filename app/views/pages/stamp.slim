@@ -1,0 +1,19 @@
+section.text-section.skip-align
+  .center
+    h1 Selo 1%
+    = text_for 'Selo 1%'
+    .stamp
+
+section#stamps.dotted-section
+  .center
+    ul
+      - (Stamp.all + placeholders(Stamp)).shuffle.each do |stamp|
+        - if stamp
+          li style="background-image: url('#{stamp.logo}')"
+            = link_to stamp.link, target: '_blank' do
+              .overlay
+                span= stamp.role
+                h4= stamp.name
+                span Ir para o site
+        - else
+          li.placeholder

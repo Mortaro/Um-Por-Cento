@@ -198,6 +198,23 @@ li
   float: left
   color: #021c1d
   text-align: center
+  h1
+    font-family: "Amatic SC", cursive
+    font-size: 68px
+    width: 100%
+    margin-bottom: 50px
+    font-weight: normal
+    text-shadow: #000 1px 1px 1px
+  p
+    font-size: 17px
+    line-height: 25px
+    margin-bottom: 30px
+    strong
+      font-size: 17px
+      margin-left: 5px
+      text-transform: uppercase
+  img
+    margin-top: 30px
 
 footer
   padding: 50px 0
@@ -250,28 +267,29 @@ footer ul, #navigation nav ul:last-of-type, .members-expanded li ul
         background-position-x: -99px
 
 .circles-triangle
-  .triangle-bottom
-    margin-top: -120px
-    transition: all 1s
-    display: inline-block
-    @media (max-width: 700px)
-      width: 100%
-    .blue-circle
-      margin: 0 -60px
-      transition: all 1s
+  position: relative
+  @media (min-width: 500px)
+    width: 500px
+    height: 500px
+  display: inline-block
   .blue-circle
     display: inline-block
-    width: 340px
-    height: 340px
+    width: 280px
+    height: 280px
     border-radius: 100%
     background: rgba($cyan, 0.7)
+    @media (min-width: 500px)
+      position: absolute
+      top: 110px
+      left: 110px
+      transition: all 1.5s
     a
       display: table-cell
       font-family: "Amatic SC", cursive
       font-size: 40px
       text-align: center
-      width: 340px
-      height: 340px
+      width: 280px
+      height: 280px
       vertical-align: middle
       border-radius: 100%
       transition: all .3s
@@ -285,10 +303,15 @@ footer ul, #navigation nav ul:last-of-type, .members-expanded li ul
         color: #000 !important
         box-shadow: rgba(#000, 0.5) 0 0 40px
   &.active
-    .triangle-bottom
-      margin-top: -80px
-      .blue-circle
-        margin: 0 -25px
+    @media (min-width: 500px)
+      .blue-circle:nth-child(1)
+        top: 10px
+      .blue-circle:nth-child(2), .blue-circle:nth-child(3)
+        top: 210px
+      .blue-circle:nth-child(2)
+        left: -10px
+      .blue-circle:nth-child(3)
+        left: 220px
 
 .construction
   opacity: 0.3
@@ -312,6 +335,22 @@ footer ul, #navigation nav ul:last-of-type, .members-expanded li ul
     bottom: 130px
   h2
     bottom: 30px
+
+#g-a-b-w
+  background: image-url('g-a-b-w-bg.jpg') no-repeat center
+  background-size: 100% auto
+  position: relative
+  overflow: hidden
+  h1
+    background: rgba(#000, 0.8)
+    padding: 20px 20px 20px 40px
+    font-family: "Amatic SC", cursive
+    font-size: 40px
+    position: absolute
+    right: 0
+    color: #fff
+  h1
+    bottom: 130px
 
 #contact
   form
@@ -409,3 +448,75 @@ footer ul, #navigation nav ul:last-of-type, .members-expanded li ul
   padding: 5px 10px
   margin: 30px 10% 0
   text-transform: uppercase
+
+.stamp
+  background: image-url('stamp-bg.png')
+  width: 133px
+  height: 133px
+  display: inline-block
+  transition: all .3s
+  background-position-y: -144px
+
+.text-section:hover
+  .stamp
+    background-position-y: 0px !important
+
+#stamps
+  text-align: center
+  ul
+    margin-top: 40px
+    display: inline-block
+    max-width: 920px
+    li
+      text-align: center
+      width: 220px
+      height: 220px
+      display: inline-block
+      margin: 4px 5px 5px
+      background-size: 100% auto
+      background-position: center
+      cursor: pointer
+      transition: all .3s
+      &:hover
+        background-size: 105% auto
+      &.placeholder
+        border: 1px dashed #eee
+        cursor: help
+        opacity: 0.5
+      .overlay
+        position: relative
+        background: rgba($cyan, 0.7)
+        width: 100%
+        height: 100%
+        color: #000
+        transition: all .3s
+        opacity: 0
+        float: left
+        h4
+          font-size: 17px
+          margin: 10px 0
+          text-transform: uppercase
+          width: 80%
+          display: inline-block
+        span:first-of-type
+          margin-top: 30px
+          opacity: 0
+          float: left
+          width: 100%
+          transition: all .3s
+          display: inline-block
+        span:last-of-type
+          border: 1px solid #000
+          padding: 1px 5px
+          position: absolute
+          left: 20px
+          bottom: 5px
+          opacity: 0.7
+          transition: all .3s
+        &:hover
+          opacity: 1
+          span:first-of-type
+            margin-top: 70px
+            opacity: 1
+          span:last-of-type
+            left: 5px

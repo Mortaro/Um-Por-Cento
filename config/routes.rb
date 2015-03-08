@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   get '/inspiracoes' => 'pages#inspirations', as: 'inspirations'
   get '/parceiros' => 'pages#partners', as: 'partners'
   get '/loja' => 'pages#store', as: 'store'
+  get '/g-a-b-w' => 'pages#g_a_b_w', as: 'g_a_b_w'
+  get '/manifestos' => 'pages#manifests', as: 'manifests'
+  get '/selo' => 'pages#stamp', as: 'stamp'
   match '/contato' => 'pages#contact', as: 'contact', via: [:get, :post]
+
 
 end
