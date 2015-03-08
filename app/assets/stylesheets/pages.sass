@@ -4,7 +4,7 @@ $cyan:  #12d9e1
   margin: 0
   padding: 0
   font-family: "Gotham Book", sans-serif
-  font-size: 14px
+  font-size: 16px
   box-sizing: border-box
 
 a
@@ -88,6 +88,7 @@ li
         text-transform: uppercase
         line-height: 32px
     ul:first-of-type
+      margin-bottom: 40px
       &:before, &:after
         content: ""
         background: image-url('dotted-row.png') no-repeat center
@@ -206,13 +207,14 @@ footer
   float: left
   ul
     float: left
-    margin-top: -4px
+    margin: -4px 20px 0 0
     li
       margin-right: 5px
   p
     float: right
     a
       margin: 0 5px
+      color: $cyan
   @media (max-width: 980px)
     line-height: 25px
     text-align: center

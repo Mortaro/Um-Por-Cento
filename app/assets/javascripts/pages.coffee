@@ -1,5 +1,9 @@
 $ ->
 
+  $('[data-easteregg]').click ->
+    window.open('http://'+$(@).attr('data-easteregg'), '_blank')
+    $(@).unbind()
+
   $('.go-back').click ->
     $('html, body').animate {scrollTop: 0}, 'slow'
     $(@).closest('section').slideUp()
