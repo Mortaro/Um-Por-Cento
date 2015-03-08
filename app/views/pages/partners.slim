@@ -2,7 +2,7 @@ section#partners.text-section
   .center
     h1 Parceiros
     ul.members
-      - (Partner.all + ([nil] * (4-(Partner.count % 4)))).shuffle.each do |partner|
+      - (Partner.all + placeholders(Partner)).shuffle.each do |partner|
         - if partner
           li style="background-image: url('#{partner.logo}')" data-index=partner.id
             = link_to partner.link, target: '_blank' do
