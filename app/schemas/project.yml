@@ -1,0 +1,34 @@
+project:
+
+  picture:
+    type: string
+
+  name:
+    type: string
+
+  category:
+    type: string
+
+  date:
+    type: string
+
+  kind:
+    type: string
+
+  about:
+    type: text
+
+  facebook:
+    type: string
+
+  instagram:
+    type: string
+
+  vimeo:
+    type: string
+
+  link:
+    type: string
+
+  embed:
+    type: string

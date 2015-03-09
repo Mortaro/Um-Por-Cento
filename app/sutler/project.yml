@@ -1,0 +1,34 @@
+attributes:
+
+  name:
+    input: text_field
+    index: name
+
+  picture:
+    input: gallery
+
+  category:
+    input: select
+    options: Create, Serve
+    index: category
+
+  date:
+    input: text_field
+
+  kind:
+    input: text_field
+
+  about:
+    input: text_area
+
+  facebook:
+    input: text_field
+
+  instagram:
+    input: text_field
+
+  link:
+    input: text_field
+
+  embed:
+    input: text_field
