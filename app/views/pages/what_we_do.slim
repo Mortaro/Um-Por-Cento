@@ -16,3 +16,33 @@ section.text-section#what_we_do
         | Servimos
         span
           | (Consultoria Social)
+
+section#create.dotted-section
+  .center
+    h2 Criamos
+    ul.members
+      - (Project.we_create + placeholders(Project.we_create)).shuffle.each do |project|
+        - if project
+          li style="background-image: url('#{project.picture}')" data-index=project.id
+            .overlay
+              span= project.category
+              h4= project.name
+              span +
+        - else
+          li.placeholder
+
+ul.members-expanded data-easteregg='sincronariodapaz.org/'
+  - Project.all.each do |project|
+    li.center data-index=project.id
+      = image_tag project.picture
+      em= project.date
+      h3= project.name
+      p= project.about
+      ul
+        - if project.facebook?
+          li= link_to "Facebook", "https://www.facebook.com/#{project.facebook}", target: '_blank'
+        - if project.instagram?
+          li= link_to "Instagram", "http://instagram.com/#{project.instagram}", target: '_blank'
+      - if project.link?
+        li= link_to project.link, project.link, target: '_blank'
+      = link_to 'Voltar', '#'

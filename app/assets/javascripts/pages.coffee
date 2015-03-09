@@ -1,5 +1,8 @@
 $ ->
 
+  $('#blur').click ->
+    $('[href=#navigation]').click()
+
   $('[data-easteregg]').click ->
     window.open('http://'+$(@).attr('data-easteregg'), '_blank')
     $(@).unbind('click')
@@ -16,27 +19,8 @@ $ ->
     section = $(@)
     height = $(window).height()
     section.css('min-height', height)
-    center = $(@).find('.center').first()
-    unless $(@).hasClass('skip-align')
-      if center.size() > 0
-        if center.height() < height
-          if section.is(':visible')
-            center.css("margin-top", ((height - center.height()) / 2))
-          else
-            section.show()
-            center.css("margin-top", ((height - center.height()) / 2))
-            section.hide()
     $(window).resize ->
       section.css('min-height', height)
-      unless $(@).hasClass('skip-align')
-        if center.size() > 0
-          if center.height() < height
-            if section.is(':visible')
-              center.css("margin-top", ((height - center.height()) / 2))
-            else
-              section.show()
-              center.css("margin-top", ((height - center.height()) / 2))
-              section.hide()
 
   $('#contact form').submit ->
     btn = $(@).find('input[type=submit]')

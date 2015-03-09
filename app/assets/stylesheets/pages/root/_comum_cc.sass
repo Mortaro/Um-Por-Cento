@@ -4,8 +4,8 @@ section#comumcc
   padding: 190px 10px 90px
   text-align: center
   position: relative
-  background: image-url('comum-section-bg.jpg')
-  background-size: 120% auto
+  //background: image-url('comum-section-bg.jpg')
+  //background-size: 120% auto
   text-shadow: 0px 0px 1px rgba(#000, 0.7)
   //@media (min-width: 1000px)
     &:before
@@ -55,21 +55,18 @@ section#comumcc
     h3
       text-transform: uppercase
       font-family: "Amatic SC", cursive
-      font-size: 30px
       position: absolute
-      top: -155px
+      top: -100px
       left: 0
       width: 100%
+      color: #000
       @media (max-width: 1000px)
-        color: $cyan
         top: -55px
       @media (min-width: 1000px)
         top: -155px
     &:hover
       background: darken($cyan, 10%)
       box-shadow: rgba(0,0,0,0.5) 0 0 74px inset
-      h3
-        text-decoration: line-through
   &.active
     .blue-circle
       margin: 0 -10px

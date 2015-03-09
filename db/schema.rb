@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150308215650) do
+ActiveRecord::Schema.define(version: 20150308234650) do
 
   create_table "members", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -37,6 +37,22 @@ ActiveRecord::Schema.define(version: 20150308215650) do
     t.string   "role"
     t.string   "name"
     t.string   "link"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "picture"
+    t.string   "name"
+    t.string   "category"
+    t.string   "date"
+    t.string   "kind"
+    t.text     "about"
+    t.string   "facebook"
+    t.string   "instagram"
+    t.string   "vimeo"
+    t.string   "link"
+    t.string   "embed"
   end
 
   create_table "slides", force: :cascade do |t|

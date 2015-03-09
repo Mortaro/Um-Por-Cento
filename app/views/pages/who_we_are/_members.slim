@@ -9,14 +9,15 @@ ul.members
     - else
       li.placeholder
 
-ul.members-expanded data-easteregg='sincronariodapaz.org/'
+ul.members-expanded
   - Member.send(kind).each do |member|
     li.center data-index=member.id
-      = image_tag member.avatar
-      em= member.birthday
-      h3= member.name
-      h4= member.kin
-      p= member.about
+      .avatar style="background-image: url('#{member.avatar}')"
+      .kin data-easteregg='sincronariodapaz.org/'
+        em= member.birthday
+        h3= member.name
+        h4= member.kin
+        p= member.about
       ul
         - if member.facebook?
           li= link_to "Facebook", "https://www.facebook.com/#{member.facebook}", target: '_blank'

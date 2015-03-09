@@ -186,10 +186,12 @@ li
 
 .dotted-section
   background: #021c1d image-url('dotted-bg.png')
-  padding: 0px 20px
+  padding: 60px 20px
   width: 100%
   float: left
   color: #fff
+  box-sizing: border-box
+  position: relative
 
 .text-section
   background: #fff image-url('dotted-bg-light.png')
@@ -198,7 +200,7 @@ li
   float: left
   color: #021c1d
   text-align: center
-  h1
+  h1, h2, h3
     font-family: "Amatic SC", cursive
     font-size: 68px
     width: 100%
@@ -320,7 +322,7 @@ footer ul, #navigation nav ul:last-of-type, .members-expanded li ul
 
 #store
   background: image-url('store-bg.png')
-  background-size: 120% auto
+  background-size: 10% auto
   position: relative
   overflow: hidden
   h1, h2
@@ -427,6 +429,7 @@ footer ul, #navigation nav ul:last-of-type, .members-expanded li ul
           transition: all .3s
           display: inline-block
         span:last-of-type
+          display: none
           border: 1px solid #000
           padding: 1px 5px
           position: absolute
@@ -446,8 +449,11 @@ footer ul, #navigation nav ul:last-of-type, .members-expanded li ul
   display: inline-block
   border: 1px solid #fff
   padding: 5px 10px
-  margin: 30px 10% 0
   text-transform: uppercase
+  position: absolute
+  bottom: 60px
+  left: 50%
+  margin-left: -46px
 
 .stamp
   background: image-url('stamp-bg.png')
@@ -461,7 +467,7 @@ footer ul, #navigation nav ul:last-of-type, .members-expanded li ul
   .stamp
     background-position-y: 0px !important
 
-#stamps
+#stamps, #create, #serve
   text-align: center
   ul
     margin-top: 40px
@@ -520,3 +526,5 @@ footer ul, #navigation nav ul:last-of-type, .members-expanded li ul
             opacity: 1
           span:last-of-type
             left: 5px
+#create, #serve
+  display: none
