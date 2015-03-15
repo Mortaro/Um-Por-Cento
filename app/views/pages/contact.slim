@@ -1,7 +1,6 @@
 section#contact.text-section.skip-align
   .center
     h1 Contato
-    = text_for 'Contato'
     = form_tag '/contato' do
       = label_tag :nome
       = text_field_tag :nome
@@ -10,3 +9,4 @@ section#contact.text-section.skip-align
       = label_tag :mensagem
       = text_area_tag :mensagem
       = submit_tag 'Enviar :)', data: {message: 'Sua mensagem está sendo enviada...'}
+    = text_for 'Contato'

@@ -4,7 +4,7 @@ $cyan:  #12d9e1
   margin: 0
   padding: 0
   font-family: "Gotham Book", sans-serif
-  font-size: 16px
+  font-size: 17px
   box-sizing: border-box
 
 a
@@ -360,6 +360,7 @@ footer ul, #navigation nav ul:last-of-type, .members-expanded li ul
     display: inline-block
     box-sizing: border-box
     padding: 10px
+    margin-bottom: 30px
     label
       width: 100%
       text-align: left
@@ -532,5 +533,51 @@ footer ul, #navigation nav ul:last-of-type, .members-expanded li ul
             opacity: 1
           span:last-of-type
             left: 5px
-#create, #serve
+  h1, h2, h3
+    font-family: "Amatic SC", cursive
+    font-size: 68px
+    width: 100%
+    margin-bottom: 50px
+    font-weight: normal
+    color: #fff
+    text-shadow: #fff 1px 1px 1px
+  p
+    font-size: 19px
+    line-height: 25px
+    margin-bottom: 30px
+    strong
+      font-size: 19px
+      margin-left: 5px
+      text-transform: uppercase
+
+#serve, #create
   display: none
+
+.projects-expanded
+  text-align: center
+  padding-top: 30px
+  .thumbnail
+    width: 220px
+    height: 220px
+    overflow: hidden
+    border-radius: 100%
+    display: inline-block
+    img
+      max-height: 220px
+  p, em
+    color: #fff
+  .project-link
+    width: 100%
+    display: inline-block
+    margin-top: 10px
+
+.iframe
+  width: 100%
+  margin-top: 30px
+  iframe
+    @media (min-width: 600px)
+      width: 600px
+      height: 351px
+    @media (max-width: 600px)
+      width: 100%
+    border: 0

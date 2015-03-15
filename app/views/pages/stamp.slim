@@ -1,11 +1,7 @@
-section.text-section.skip-align
+section#stamps.dotted-section
   .center
     h1 Selo 1%
     = text_for 'Selo 1%'
-    .stamp
-
-section#stamps.dotted-section
-  .center
     ul
       - (Stamp.all + placeholders(Stamp)).shuffle.each do |stamp|
         - if stamp

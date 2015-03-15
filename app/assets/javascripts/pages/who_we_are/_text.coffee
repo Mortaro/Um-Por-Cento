@@ -1,6 +1,6 @@
 $ ->
 
-  $('.text-section ul a').click ->
+  $('.text-section a[href*="#"]').click ->
     $('.dotted-section').slideUp()
     target = $($(@).attr('href'))
     target.slideDown ->

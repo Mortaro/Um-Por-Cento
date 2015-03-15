@@ -1,0 +1,10 @@
+ul.members
+  - (Project.send(kind) + placeholders(Project.send(kind))).shuffle.each do |project|
+    - if project
+      li style="background-image: url('#{project.picture}')" data-index=project.id
+        .overlay
+          span= project.kind
+          h4= project.name
+          span +
+    - else
+      li.placeholder
