@@ -1,5 +1,21 @@
 $ ->
 
+  $('.scroll-section').each ->
+    transition = (that) ->
+      that.find('.circle').last().removeClass('active')
+      that.find('.circle').first().addClass('active')
+      setTimeout ->
+        that.find('.circle').first().removeClass('active')
+        that.find('.circle').last().addClass('active')
+        setTimeout ->
+          transition that
+        , 1000
+      , 1000
+    transition $(@)
+    $(@).click ->
+      top = $($(@).attr('data-target')).offset().top
+      $('html, body').animate scrollTop: top, 'slow'
+
   $('#blur').click ->
     $('[href=#navigation]').click()
 
