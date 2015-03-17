@@ -9,6 +9,8 @@ ul.projects-expanded.members-expanded
       em= project.date
       h3= project.name
       p= project.about
+      - if project.embed?
+        .iframe= raw project.embed
       ul
         - if project.facebook?
           li= link_to "Facebook", "https://www.facebook.com/#{project.facebook}", target: '_blank'
@@ -16,6 +18,4 @@ ul.projects-expanded.members-expanded
           li= link_to "Instagram", "http://instagram.com/#{project.instagram}", target: '_blank'
       - if project.link?
         = link_to project.link, project.link, target: '_blank', class: 'project-link'
-      - if project.embed?
-        .iframe= raw project.embed
       = link_to 'Voltar', '#'
