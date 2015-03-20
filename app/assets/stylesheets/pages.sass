@@ -403,10 +403,10 @@ footer ul, #navigation nav ul:last-of-type, .members-expanded li ul
       background-repeat: no-repeat
       cursor: pointer
       transition: all .3s
+      border: 2px dashed #eee
       &:hover
         background-size: 120% auto
       &.placeholder
-        border: 2px dashed #eee
         cursor: help
       .overlay
         position: relative
@@ -574,6 +574,8 @@ footer ul, #navigation nav ul:last-of-type, .members-expanded li ul
 .iframe
   width: 100%
   margin-top: 30px
+  p
+    display: none
   iframe
     @media (min-width: 600px)
       width: 600px
